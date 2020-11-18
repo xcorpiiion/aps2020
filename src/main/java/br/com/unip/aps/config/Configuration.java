@@ -1,0 +1,157 @@
+package br.com.unip.aps.config;
+
+import br.com.unip.aps.model.Noticia;
+import br.com.unip.aps.service.NoticiaServiceImpl;
+import org.joda.time.DateTime;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+
+import java.util.List;
+
+import static java.util.Arrays.asList;
+
+@org.springframework.context.annotation.Configuration
+public class Configuration {
+
+    @Autowired
+    private NoticiaServiceImpl noticiaService;
+
+    @Bean
+    public void inicializarBanco() {
+        final String matoGrossoTitulo = "Taxa de Desmatamento – Mato Grosso";
+        final String amazonasTitulo = "Taxa de Desmatamento - Amazonas";
+        final String paraTitulo = "Taxa de Desmatamento - Pará";
+        final String rondoniaTitulo = "Taxa de Desmatamento - Rondônia";
+        List<Noticia> noticias = asList(
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1434²", new DateTime(2019, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1045", new DateTime(2018, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²:1001", new DateTime(2017, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1129", new DateTime(2016, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 712", new DateTime(2015, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 500", new DateTime(2014, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 583", new DateTime(2013, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 523", new DateTime(2012, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 502", new DateTime(2011, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 595", new DateTime(2010, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 405", new DateTime(2009, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 604", new DateTime(2008, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 610", new DateTime(2007, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 788", new DateTime(2006, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 775", new DateTime(2005, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1232", new DateTime(2004, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1558", new DateTime(2003, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 885", new DateTime(2002, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 634", new DateTime(2001, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 612", new DateTime(2000, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 720", new DateTime(1999, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 670", new DateTime(1998, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 589", new DateTime(1997, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1023", new DateTime(1996, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 2114", new DateTime(1995, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 370", new DateTime(1994, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 370", new DateTime(1993, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 799", new DateTime(1992, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 980", new DateTime(1991, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 520", new DateTime(1990, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1180", new DateTime(1989, 1, 1, 0, 0)),
+                new Noticia(amazonasTitulo, "Total de area desmatada em KmA²: 1510", new DateTime(1988, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.702", new DateTime(2019, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.490", new DateTime(2018, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²:1.561", new DateTime(2017, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.489", new DateTime(2016, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.601", new DateTime(2015, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.075", new DateTime(2014, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.139", new DateTime(2013, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 757", new DateTime(2012, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.120", new DateTime(2011, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 871", new DateTime(2010, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.049", new DateTime(2009, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 3.258", new DateTime(2008, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 2.678", new DateTime(2007, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 4.333", new DateTime(2006, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 7.145", new DateTime(2005, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 11.814", new DateTime(2004, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 10.405", new DateTime(2003, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 7.892", new DateTime(2002, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 7.703", new DateTime(2001, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 6.369", new DateTime(2000, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 6.963", new DateTime(1999, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 6.466", new DateTime(1998, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 5.271", new DateTime(1997, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 6.543", new DateTime(1996, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 1.0391", new DateTime(1995, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 6.220", new DateTime(1994, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 6.220", new DateTime(1993, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 4.674", new DateTime(1992, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 2.840", new DateTime(1991, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 4.020", new DateTime(1990, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 5.960", new DateTime(1989, 1, 1, 0, 0)),
+                new Noticia(matoGrossoTitulo, "Total de area desmatada em KmA²: 5.140", new DateTime(1988, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 4172,00", new DateTime(2019, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 2744,00", new DateTime(2018, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 2433,00", new DateTime(2017, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 2992,00", new DateTime(2016, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 2153,00", new DateTime(2015, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 1887,00", new DateTime(2014, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 2346,00", new DateTime(2013, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 1741,00", new DateTime(2012, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 3008,00", new DateTime(2011, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 3770,00", new DateTime(2010, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 4281,00", new DateTime(2009, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5607,00", new DateTime(2008, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5526,00", new DateTime(2007, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5659,00", new DateTime(2006, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5899,00", new DateTime(2005, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 8870,00", new DateTime(2004, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 7145,00", new DateTime(2003, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 7510,00", new DateTime(2002, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5237,00", new DateTime(2001, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 6671,00", new DateTime(2000, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5111,00", new DateTime(1999, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5829,00", new DateTime(1998, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 4139,00", new DateTime(1997, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 6135,00", new DateTime(1996, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 7845,00", new DateTime(1995, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 4284,00", new DateTime(1994, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 4284,00", new DateTime(1993, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 3787,00", new DateTime(1992, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 3780,00", new DateTime(1991, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 4890,00", new DateTime(1990, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 5750,00", new DateTime(1989, 1, 1, 0, 0)),
+                new Noticia(paraTitulo, "Total de area desmatada em KmA²: 6990,00", new DateTime(1988, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1245.00", new DateTime(2019, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1316.00", new DateTime(2018, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1382.00", new DateTime(2017, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1647.00", new DateTime(2016, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1708.00", new DateTime(2015, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1045.00", new DateTime(2014, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1045.00", new DateTime(2013, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1311.00", new DateTime(2012, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1799.00", new DateTime(2011, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 618.00", new DateTime(2010, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 769.00", new DateTime(2009, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 1544.00", new DateTime(2008, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 2017.00", new DateTime(2007, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 2782.00", new DateTime(2006, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3577.00", new DateTime(2005, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3649.00", new DateTime(2004, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 6049.00", new DateTime(2003, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 2494.00", new DateTime(2002, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 2228.00", new DateTime(2001, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 2659.00", new DateTime(2000, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3122.00", new DateTime(1999, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 2415.00", new DateTime(1998, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3129.00", new DateTime(1997, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 4153.00", new DateTime(1996, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3599.00", new DateTime(1995, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 4284,00", new DateTime(1994, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 4284,00", new DateTime(1993, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3787,00", new DateTime(1992, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 3780,00", new DateTime(1991, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 4890,00", new DateTime(1990, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 5750,00", new DateTime(1989, 1, 1, 0, 0)),
+                new Noticia(rondoniaTitulo, "Total de area desmatada em KmA²: 6990,00", new DateTime(1988, 1, 1, 0, 0)));
+        this.noticiaService.saveAll(noticias);
+    }
+
+}
